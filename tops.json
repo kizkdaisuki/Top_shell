@@ -1,0 +1,15 @@
+{
+  "vertexes": [
+    {
+      "source": "first",
+      "edges" : [
+        {"target": "second", "relation":  "None"}
+      ],
+      "count": 1,
+      "color": "0xffffff"
+    }
+  ],
+  "colors": {
+    "white": "0xffffff"
+  }
+}
