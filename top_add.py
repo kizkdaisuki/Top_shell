@@ -15,7 +15,7 @@ class Top_add(Top):
             Top_new(self.my_top_name)
         self.method_read_from_json()
         if self.my_top_source not in self.my_top_json_dict['vertexes']:
-            local_var_init_dict = {"edges": {self.my_top_target : self.my_top_relation}, "color": "white", "count": 0}
+            local_var_init_dict = {"edges": {self.my_top_target : self.my_top_relation}, "color": "b", "count": 0}
             self.my_top_json_dict['vertexes'][self.my_top_source] = local_var_init_dict
         else:
             self.my_top_json_dict['vertexes'][self.my_top_source]["edges"][self.my_top_target] = self.my_top_relation

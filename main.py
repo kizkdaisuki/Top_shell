@@ -39,6 +39,11 @@ def main(func_param_args: list) -> None:
             func_cmd_top_add(local_var_top_name, local_var_source, local_var_target)
         except IndexError:
             message_func_print_message()
+    elif local_var_cmd == 'show':
+        try:
+           local_var_top_name = str(func_param_args[1])
+        except IndexError:
+            pass
 
 
 if __name__ == '__main__':

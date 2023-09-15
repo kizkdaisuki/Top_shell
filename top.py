@@ -24,9 +24,7 @@ class Top:
         try:
             with open(self.my_top_name_file_json, 'r') as f:
                 self.my_top_json_dict = json.load(f)
-            print("this is method")
         except FileNotFoundError:
-            print('kizk')
             self.my_top_is_first_create_json = True
 
     def method_write_to_json(self):

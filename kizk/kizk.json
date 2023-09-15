@@ -1,1 +1,1 @@
-{"vertexes": {"kizk": {"edges": {"qmt": ""}, "color": "white", "count": 0}}}
+{"vertexes": {"kizk": {"edges": {"qmt": "", "az": ""}, "color": "white", "count": 0}, "az": {"edges": {"cd": ""}, "color": "white", "count": 0}, "cd": {"edges": {"cc": ""}, "color": "b", "count": 0}}}
