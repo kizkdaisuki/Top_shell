@@ -17,8 +17,8 @@ class Top_new(Top):
         self.my_top_json_dict = local_var_init_dict.copy()
         if self.my_top_is_first_create_json:
             self.method_write_to_json()
-        else:
-            print('is not first create json')
+        # else:
+        #     print('is not first create json')
 
 
 def main():

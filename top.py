@@ -6,6 +6,8 @@ class Top:
         self.my_top_name_file_html = None
         self.my_top_name_file_json = None
         self.my_top_root_folder_name = None
+        self.my_top_root_html_folder_name = None
+        self.my_top_name_html_folder_name = None
         self.my_top_root_file_name = GLOBAL_VAR_ROOT_FILE_NAME
         self.my_top_name = top_name
         self.my_top_json_dict = {}
@@ -18,6 +20,8 @@ class Top:
             os.makedirs(self.my_top_root_folder_name)
         self.my_top_name_file_json = self.my_top_root_folder_name + top_name + ".json"
         self.my_top_name_file_html = self.my_top_root_folder_name + top_name + ".html"
+        self.my_top_name_html_folder_name = self.my_top_root_folder_name + 'html'
+        self.my_top_root_html_folder_name = self.my_top_root_file_name + 'top_html/'
         self.method_init_json_dict()
 
     def method_init_json_dict(self):
@@ -26,7 +30,12 @@ class Top:
                 self.my_top_json_dict = json.load(f)
         except FileNotFoundError:
             self.my_top_is_first_create_json = True
-
+        if not os.path.exists(self.my_top_root_folder_name + 'html'):
+            print('kizk')
+            local_var_create_html_file_name = f'cp -r {self.my_top_root_html_folder_name[:-1]} {self.my_top_name_html_folder_name}'
+            print(local_var_create_html_file_name)
+            pass
+            os.system(local_var_create_html_file_name)
     def method_write_to_json(self):
         with open(self.my_top_name_file_json, 'w') as f:
             json.dump(self.my_top_json_dict, f)

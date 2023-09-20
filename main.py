@@ -18,8 +18,12 @@ def func_cmd_top_add(func_param_top_name: str, func_param_source: str, func_para
     local_var_top_add.method_add_top()
     pass
 
+def func_cmd_top_show(func_param_top_name: str) -> None:
+    local_var_top_show = Top_show(func_param_top_name)
+    print("enter func_cmd_top_show")
+
 def main(func_param_args: list) -> None:
-    print(*func_param_args)
+    # print(*func_param_args)
     local_var_args_len = len(func_param_args)
     if not local_var_args_len:
         message_func_print_message()
@@ -29,20 +33,22 @@ def main(func_param_args: list) -> None:
         try:
             local_var_top_name = str(func_param_args[1])
             func_cmd_top_new(local_var_top_name)
-            print('is_ok')
+            # print('is_ok')
         except IndexError:
             message_func_print_message()
     elif local_var_cmd == 'add':
         try:
             local_var_top_name, local_var_source, local_var_target = str(func_param_args[1]), str(func_param_args[2]), str(func_param_args[3])
-            print(local_var_top_name, local_var_source, local_var_target)
+            # print(local_var_top_name, local_var_source, local_var_target)
             func_cmd_top_add(local_var_top_name, local_var_source, local_var_target)
         except IndexError:
             message_func_print_message()
     elif local_var_cmd == 'show':
         try:
            local_var_top_name = str(func_param_args[1])
+           func_cmd_top_show(local_var_top_name)
         except IndexError:
+            message_func_print_message()
             pass
 
 
